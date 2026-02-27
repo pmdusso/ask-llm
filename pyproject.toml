@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ask-llm"
+version = "0.3.0"
+description = "CLI wrappers for Gemini, Claude, OpenAI and Qwen LLMs"
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=1.0.0",
+    "requests>=2.31.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+ask-gemini = "ask_llm.ask_gemini:main"
+ask-claude = "ask_llm.ask_claude:main"
+ask-openai = "ask_llm.ask_openai:main"
+ask-qwen   = "ask_llm.ask_qwen:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ask_llm*"]
+
+[tool.setuptools.package-data]
+ask_llm = ["py.typed"]
