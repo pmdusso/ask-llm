@@ -4,8 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ask-llm-help"
-version = "0.3.0"
+version = "0.3.1"
 description = "CLI wrappers for Gemini, Claude, OpenAI and Qwen LLMs"
+readme = "README.md"
+license = "MIT"
 requires-python = ">=3.11"
 dependencies = [
     "openai>=1.0.0",
