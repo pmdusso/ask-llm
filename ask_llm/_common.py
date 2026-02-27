@@ -8,9 +8,12 @@ from typing import Optional
 
 from dotenv import load_dotenv
 
-# Load .env from the directory where this file lives, then walk up to find one
+# Load .env: check CWD first (for installed CLI usage), then module-relative
+# paths (for editable/development installs), then default dotenv search.
+_cwd = Path.cwd()
 _here = Path(__file__).resolve().parent
-for _candidate in [_here / ".env", _here.parent / ".env", _here.parent.parent / ".env"]:
+_candidates = [_cwd / ".env", _here / ".env", _here.parent / ".env"]
+for _candidate in _candidates:
     if _candidate.exists():
         load_dotenv(_candidate)
         break

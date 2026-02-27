@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ask-llm-help"
-version = "0.3.1"
+version = "0.3.2"
 description = "CLI wrappers for Gemini, Claude, OpenAI and Qwen LLMs"
 readme = "README.md"
 license = "MIT"
