@@ -14,6 +14,12 @@ A collection of lightweight Python wrappers for calling different LLM providers 
 ## Installation
 
 ```bash
+pip install ask-llm-help
+```
+
+For development:
+
+```bash
 pip install -e .
 ```
 

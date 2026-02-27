@@ -3,7 +3,7 @@ requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ask-llm"
+name = "ask-llm-help"
 version = "0.3.0"
 description = "CLI wrappers for Gemini, Claude, OpenAI and Qwen LLMs"
 requires-python = ">=3.11"
